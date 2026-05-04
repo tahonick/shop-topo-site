@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-<name>Shop Build Plan ù 11122 274th Ave NW</name>
-<description>Proposed 32ù40 shop at ~250 ft from south property line; eastern driveway.</description>
-<Placemark><name>Shop pad 32ù40</name>
+<name>Shop Build Plan ‚Äî 11122 274th Ave NW</name>
+<description>Proposed 32√ó40 shop at ~250 ft from south property line; eastern driveway.</description>
+<Placemark><name>Shop pad 32√ó40</name>
 <Style><LineStyle><color>7700ff00</color><width>3</width></LineStyle><fill>1</fill><PolyStyle><color>7700ff00</color></PolyStyle></Style>
 <Polygon><outerBoundaryIs><LinearRing><coordinates>-93.5488871,45.4677283,0 -93.5487624,45.4677289,0 -93.5487634,45.4678386,0 -93.5488882,45.4678380,0 -93.5488871,45.4677283,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
 </Placemark><Placemark><name>Gravel Driveway (18ft wide)</name>

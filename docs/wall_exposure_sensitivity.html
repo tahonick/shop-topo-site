@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<title>Wall exposure sensitivity — driveway options (≤8%)</title>
+<style>
+body { font-family: system-ui, Segoe UI, sans-serif; background:#0f1419; color:#e8ecf0;
+  margin:0; padding:20px; line-height:1.5; }
+h1 { font-size:1.25rem; color:#85c1e9; }
+p.note { font-size:13px; color:#9aa5b1; max-width:900px; }
+a { color:#5dade2; }
+table { border-collapse:collapse; margin-top:14px; font-size:13px; }
+th, td { border:1px solid #34495e; padding:8px 10px; text-align:right; }
+th:first-child, td:first-child { text-align:left; }
+th { background:#1a2533; color:#aed6f1; }
+tr:nth-child(even) td { background:#151c26; }
+</style></head><body>
+<h1>Finish-floor options from driveway target band (cap 8%)</h1>
+<p class="note">Same DEM and geometry as <a href="shop_viz.html">shop_viz.html</a>.
+<code>H ≈ z_FF − z_nat</code> at footprint corners. Base FF <strong>1018.24 ft</strong>
+(stem-wall drain finish (driveway target % lift)). Balanced pad mean ≈ 1010.03 ft.
+<strong>Driveway % column</strong> uses the chord <strong>road PL+10′ → east concrete pad edge</strong> (not shop-center run).</p>
+<p class="note">Options are constrained to advisory bands: <strong style="color:#2ecc71;">green ≤6%</strong>,
+<strong style="color:#f1c40f;">yellow 6–8%</strong>. Rows above 8% are intentionally excluded.</p>
+<p class="note">Natural corners (ft NAVD88): SW=1008.01, SE=1010.28, NE=1012.81, NW=1008.90</p>
+<table>
+<tr><th>Band</th><th>Target %</th><th>ΔFF (ft)</th><th>FF (ft)</th><th>Driveway %</th><th>House Δ (ft)</th><th>max exp</th><th>SW</th><th>SE</th><th>NE</th><th>NW</th></tr>
+<tr><td><span style="font-weight:700;color:#f1c40f;">YELLOW</span></td><td>-8.0</td><td>-6.17</td><td>1012.07</td><td>-8.00</td><td>+25.93</td><td>4.06</td><td>+4.06</td><td>+1.80</td><td>-0.74</td><td>+3.17</td></tr>
+<tr><td><span style="font-weight:700;color:#2ecc71;">GREEN</span></td><td>-6.0</td><td>-4.94</td><td>1013.31</td><td>-6.00</td><td>+24.69</td><td>5.29</td><td>+5.29</td><td>+3.03</td><td>+0.50</td><td>+4.40</td></tr>
+<tr><td><span style="font-weight:700;color:#2ecc71;">GREEN</span></td><td>-4.0</td><td>-3.70</td><td>1014.54</td><td>-4.00</td><td>+23.46</td><td>6.53</td><td>+6.53</td><td>+4.27</td><td>+1.73</td><td>+5.64</td></tr>
+<tr><td><span style="font-weight:700;color:#2ecc71;">GREEN</span></td><td>-2.0</td><td>-2.47</td><td>1015.78</td><td>-2.00</td><td>+22.22</td><td>7.76</td><td>+7.76</td><td>+5.50</td><td>+2.97</td><td>+6.87</td></tr>
+<tr><td><span style="font-weight:700;color:#2ecc71;">GREEN</span></td><td>+0.0</td><td>-1.23</td><td>1017.01</td><td>+0.00</td><td>+20.99</td><td>9.00</td><td>+9.00</td><td>+6.73</td><td>+4.20</td><td>+8.11</td></tr>
+<tr><td><span style="font-weight:700;color:#2ecc71;">GREEN</span></td><td>+2.0</td><td>+0.00</td><td>1018.24</td><td>+2.00</td><td>+19.76</td><td>10.23</td><td>+10.23</td><td>+7.97</td><td>+5.44</td><td>+9.34</td></tr>
+<tr><td><span style="font-weight:700;color:#2ecc71;">GREEN</span></td><td>+4.0</td><td>+1.23</td><td>1019.48</td><td>+4.00</td><td>+18.52</td><td>11.47</td><td>+11.47</td><td>+9.20</td><td>+6.67</td><td>+10.58</td></tr>
+<tr><td><span style="font-weight:700;color:#2ecc71;">GREEN</span></td><td>+6.0</td><td>+2.47</td><td>1020.71</td><td>+6.00</td><td>+17.29</td><td>12.70</td><td>+12.70</td><td>+10.44</td><td>+7.91</td><td>+11.81</td></tr>
+<tr><td><span style="font-weight:700;color:#f1c40f;">YELLOW</span></td><td>+8.0</td><td>+3.70</td><td>1021.95</td><td>+8.00</td><td>+16.05</td><td>13.94</td><td>+13.94</td><td>+11.67</td><td>+9.14</td><td>+13.05</td></tr>
+</table>
+<p class="note">Also saved as <a href="wall_exposure_sensitivity.csv">wall_exposure_sensitivity.csv</a>.</p>
+</body></html>

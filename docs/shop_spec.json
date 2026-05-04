@@ -168,7 +168,7 @@
   ],
   "owner_constraints": {
     "shop_dimensions": "FIXED at 32x40 or 40x32 (rotated). No other sizes considered.",
-    "trailer_storage": "2022 Grand Design Imagine XLS 23BHE: 10'11\" tall, 23' long. Requires 12' overhead door minimum.",
+    "trailer_storage": "2022 Grand Design Imagine XLS 23BHE: 10'10\" clearance target, 23' long. Absolute minimum 11' overhead door; 12' preferred for comfortable clearance and common sizing.",
     "tree_protection": "Belt-and-suspenders protection (temp fencing, etc.) explicitly DECLINED",
     "variance_preference": "Zero-variance solution strongly preferred. Application possible but politically expensive.",
     "existing_planting_credit": "Owner has planted 100+ trees on the property. Net forest stewardship is positive."
@@ -179,6 +179,38 @@
     "all_preserved_oaks_safe": "For each oak in trees.preserve: edge_dist_to_shop_ft >= danger_zone_ft",
     "no_oak_trunks_inside_shop": "For each oak in trees.preserve: trunk location is NOT inside shop polygon",
     "ne_corner_setback": "NE corner east_setback clearance >= 2.0 ft (must remain compliant)",
-    "removed_oak_trunk_inside": "OAK_SE trunk SHOULD be inside shop polygon (it's being removed)"
+    "removed_oak_trunk_inside": "OAK_SE trunk SHOULD be inside shop polygon (it's being removed)",
+    "foundation_type_specified": "spec.foundation.type must be present and == 'stem_wall' (no extended pad model)",
+    "no_pad_extension_in_root_calcs": "Tree edge_dist_to_shop_ft values must be measured from shop polygon edge, not from a pad+taper edge"
+  },
+  "foundation": {
+    "type": "stem_wall",
+    "description": "Stem wall foundation where exterior face of the foundation IS the visible wall above grade. No graded pad extension beyond shop footprint. Confirmed with excavator.",
+    "footing_depth_ft": 4.0,
+    "footing_depth_note": "Below MN frost line (~42-48 inches). Confirm exact depth with local building official / soils report.",
+    "driveway_target_grade_pct": 2.0,
+    "driveway_target_grade_note": "Stem-wall default: finish elevation is lifted so the modeled chord (east property line +10′ road DEM sample → east edge of the concrete working pad per east_working_pad_ft) matches ≈ this driveway_target_grade_pct unless slab_finish_elev_ft_navd88 is set. Positive % ⇒ slab finish above the road sample (same sign convention as generate_viz driveway_grade_chord_road_to_east_pad_edge). Override lift with foundation.slab_finish_elev_ft_navd88 for a fixed FF. Env SHOP_TOPO_DRIVEWAY_TARGET_GRADE_PCT overrides the numeric target when the lift path is used.",
+    "slab_finish_elev_ft_navd88": null,
+    "slab_finish_elev_note": "When set to a number (NAVD88 ft), earthwork cut/fill, graded DEM, and viz use this finish floor; driveway_target_grade_pct remains design documentation—the reported driveway_drain grade is the actual chord % at this slab elevation.",
+    "east_working_pad_ft": 25,
+    "east_working_pad_grade_pct": -5,
+    "east_working_pad_note": "Exterior concrete east of the east wall only (same N-S as shop). east_working_pad_grade_pct is rise/run×100 in +X (east): negative = finish drops east to shed water (e.g. −5% over 25′ ≈ 1.25′). Not the superseded 5′ graded pad + 2:1 taper CRZ model.",
+    "construction_buffer_ft": 2.5,
+    "construction_buffer_note": "Excavator working room only — TEMPORARY disturbance during construction, restored to natural grade after backfill. NOT a permanent pad extension. Tree root impact analysis should NOT include this buffer as a permanent disturbed footprint.",
+    "supersedes_pad_model": "Earlier topo analysis modeled a 5 ft graded pad extension with 2:1 taper down to natural grade. That approach is REJECTED for this project because the tapered slope footprint extends into the danger zones of OAK SW, OAK W, and OAK N — the trees the placement was designed to preserve. Foundation-wall approach keeps the permanently disturbed footprint to the shop boundary only.",
+    "implications_for_topo_analysis": [
+      "Cut/fill volumes calculated for the 32x40 shop footprint only (1280 sq ft), not for an extended pad with taper (~2300+ sq ft under the old model).",
+      "Finish floor elevation can be set HIGHER than a balanced-cut pad model suggests, because we are not flattening a larger area to achieve a uniform pad surface.",
+      "Tree root impact distances are measured from the shop foundation footprint edge, not from a pad+taper edge.",
+      "Imported fill volume is substantially lower (rough estimate: 40-60% reduction vs the pad model).",
+      "Driveway grade calculation: shop 'pad finish elevation' now refers to the top-of-foundation / interior floor elevation, not a flattened exterior apron elevation.",
+      "Backfill against the foundation wall on the uphill (west) side is engineered fill, compacted in lifts. The wall is designed to retain it; no slope is needed."
+    ],
+    "what_NOT_to_do_in_topo_model": [
+      "Do not extend the disturbed footprint 5 ft beyond the shop on any side.",
+      "Do not apply a 2:1 or 3:1 taper slope from a pad edge.",
+      "Do not compute cut/fill against a shop+pad polygon — use the shop polygon only.",
+      "Do not flag OAK SW, OAK W, or OAK N as in-danger based on pad extension geometry."
+    ]
   }
 }
