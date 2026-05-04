@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Archive — alternate pad coordinates (historical)</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+         margin: 0; padding: 20px; background: #1a1a2e; color: #eee; font-size: 14px; }
+  h1 { margin: 0 0 4px 0; font-size: 22px; }
+  h2 { margin: 18px 0 8px 0; font-size: 16px; border-bottom: 1px solid #444; padding-bottom: 4px; }
+  .subtitle { color: #888; margin-bottom: 18px; font-size: 13px; }
+  .decision-banner {
+    background: #0d2137;
+    border: 2px solid #7f8c8d;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+  }
+  .decision-note {
+    background: #162032;
+    border-left: 4px solid #95a5a6;
+    padding: 8px 14px;
+    margin: 10px 0;
+    font-size: 13px;
+    color: #ccc;
+    border-radius: 0 6px 6px 0;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 10px; }
+  th, td { padding: 7px 10px; text-align: right; border-bottom: 1px solid #2a2a4a; }
+  th { background: #0f3460; text-align: left; font-weight: 600; color: #9fc; }
+  td:first-child { text-align: left; }
+  tr:hover td { background: rgba(255,255,255,0.03); }
+  tr.spacer td { padding: 3px 0; border: none; }
+  .good    { color: #2ecc71; font-weight: bold; }
+  .warning { color: #f39c12; font-weight: bold; }
+  .danger  { color: #e74c3c; font-weight: bold; }
+  .pass    { color: #2ecc71; }
+  .fail    { color: #e74c3c; }
+  .scenario-primary  { color: #5dade2; font-weight: bold; }
+  .scenario-realistic { color: #f39c12; font-weight: bold; }
+  .scenario-stretch  { color: #9b59b6; font-weight: bold; }
+  .footnote { margin-top: 14px; font-size: 11px; color: #555; line-height: 1.6; }
+  a { color: #5dade2; }
+</style>
+</head>
+<body>
+<h1>Archive: other shop XY coordinates (not built)</h1>
+<div class="subtitle">11122 274th Ave NW, Zimmerman MN &mdash; kept for reference.
+<strong>Current package:</strong> <a href="shop_viz.html">shop_viz.html</a>.</div>
+
+<div class="decision-banner">
+  <p style="margin:0;line-height:1.6;">
+    These tables reproduce the analysis for the two alternate pad locations that were not selected.
+    The <strong>aerial map</strong> and <strong>3D view</strong> on the main page show only the <strong>selected shop location</strong>.
+  </p>
+</div>
+
+<h2>Grade scenarios &amp; earthwork</h2>
+<div class="decision-note">
+  <strong>Balanced (primary):</strong> finish elevation = mean pad elevation.<br>
+  <strong>Drainage cap:</strong> finish = balanced + 0.75 ft (range 0.5&ndash;1.0 ft).<br>
+  Cost model: on-site move <code>min(cut,fill)</code> × $8/yd³,
+  excess cut × $18/yd³, excess fill × $25/yd³,
+  + $3,500 culvert / approach allowance.
+</div>
+<table>
+  <tr>
+    <th>Site</th><th>Scenario</th><th>Finish Elevation</th>
+    <th>Cut (yd³)</th><th>Fill (yd³)</th><th>Total Move (yd³)</th><th>Est. Cost</th>
+  </tr>
+<tr>
+          <td style="color:#ff69b4;font-weight:bold">A</td>
+          <td class="scenario-primary">Balanced<br><small>(primary)</small></td>
+          <td>1018.3 ft</td>
+          <td>28</td>
+          <td>28</td>
+          <td>56</td>
+          <td>~$3,724</td>
+        </tr><tr>
+          <td style="color:#ff69b4"></td>
+          <td class="scenario-realistic">Drainage cap<br><small>(+0.5–1.0 ft, ±0.25 ft)</small></td>
+          <td>1019.1 ft<br><small>+0.75 ft above balanced</small></td>
+          <td>14</td>
+          <td>51<br><small>+23 yd³ fill vs balanced; net import 37</small></td>
+          <td>65</td>
+          <td>~$4,537</td>
+        </tr><tr class="spacer"><td colspan="7"></td></tr><tr>
+          <td style="color:#3498db;font-weight:bold">B</td>
+          <td class="scenario-primary">Balanced<br><small>(primary)</small></td>
+          <td>1014.0 ft</td>
+          <td>35</td>
+          <td>35</td>
+          <td>70</td>
+          <td>~$3,780</td>
+        </tr><tr>
+          <td style="color:#3498db"></td>
+          <td class="scenario-realistic">Drainage cap<br><small>(+0.5–1.0 ft, ±0.25 ft)</small></td>
+          <td>1014.7 ft<br><small>+0.75 ft above balanced</small></td>
+          <td>17</td>
+          <td>57<br><small>+22 yd³ fill vs balanced; net import 40</small></td>
+          <td>74</td>
+          <td>~$4,636</td>
+        </tr><tr class="spacer"><td colspan="7"></td></tr>
+</table>
+
+<h2>Driveway grade (eastern approach, 111th St NW)</h2>
+<table>
+  <tr>
+    <th>Location</th>
+    <th>Road Elev (111th St)</th>
+    <th>Shop Pad Finish</th>
+    <th>Elev Diff</th>
+    <th>Routing Distance</th>
+    <th>Driveway Grade</th>
+  </tr>
+<tr>
+          <td style="color:#ff69b4;font-weight:bold">A</td>
+          <td>1019.9 ft</td>
+          <td>1019.1 ft</td>
+          <td>-0.9 ft</td>
+          <td>83 ft</td>
+          <td class="good">✅ OK (-1.0%)</td>
+        </tr><tr>
+          <td style="color:#3498db;font-weight:bold">B</td>
+          <td>1018.7 ft</td>
+          <td>1014.7 ft</td>
+          <td>-4.0 ft</td>
+          <td>83 ft</td>
+          <td class="good">✅ OK (-4.8%)</td>
+        </tr>
+</table>
+
+<h2>House relationship</h2>
+<table>
+  <tr>
+    <th>Location</th>
+    <th>House Floor</th>
+    <th>Shop Pad Finish</th>
+    <th>Vertical Drop</th>
+    <th>Horizontal Distance</th>
+    <th>Overland grade (house→pad)</th>
+  </tr>
+<tr>
+          <td style="color:#ff69b4;font-weight:bold">A</td>
+          <td>1038 ft</td>
+          <td>1019.1 ft</td>
+          <td>+18.9 ft (shop lower ✅)</td>
+          <td>152 ft</td>
+          <td>+12.5%</td>
+        </tr><tr>
+          <td style="color:#3498db;font-weight:bold">B</td>
+          <td>1038 ft</td>
+          <td>1014.7 ft</td>
+          <td>+23.3 ft (shop lower ✅)</td>
+          <td>191 ft</td>
+          <td>+12.2%</td>
+        </tr>
+</table>
+
+<h2>Setback compliance &amp; terrain stats</h2>
+<table>
+  <tr>
+    <th>Site</th><th>Terrain Range (ft)</th><th>Pad Min Elev</th><th>Pad Max Elev</th>
+    <th>E Setback Clr</th><th>S Setback Clr</th><th>Setback</th>
+  </tr>
+  <tr>
+    <td style="color:#ff69b4;font-weight:bold">A</td>
+    <td>5.8 ft</td>
+    <td>1015.5 ft</td>
+    <td>1021.3 ft</td>
+    <td>67'</td>
+    <td>235'</td>
+    <td class="pass">PASS</td>
+  </tr>
+  <tr>
+    <td style="color:#3498db;font-weight:bold">B</td>
+    <td>6.1 ft</td>
+    <td>1010.9 ft</td>
+    <td>1017.0 ft</td>
+    <td>67'</td>
+    <td>280'</td>
+    <td class="pass">PASS</td>
+  </tr>
+</table>
+
+<div class="footnote">
+  Same DEM and methodology as <a href="shop_viz.html">main report</a>. Cell area (1.64 ft)² per DEM cell.
+</div>
+</body></html>

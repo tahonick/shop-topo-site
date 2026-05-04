@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>Shop Build Plan ù 11122 274th Ave NW</name>
+<description>Proposed 32ù40 shop at ~250 ft from south property line; eastern driveway.</description>
+<Placemark><name>Shop pad 32ù40</name>
+<Style><LineStyle><color>7700ff00</color><width>3</width></LineStyle><fill>1</fill><PolyStyle><color>7700ff00</color></PolyStyle></Style>
+<Polygon><outerBoundaryIs><LinearRing><coordinates>-93.5488871,45.4677283,0 -93.5487624,45.4677289,0 -93.5487634,45.4678386,0 -93.5488882,45.4678380,0 -93.5488871,45.4677283,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+</Placemark><Placemark><name>Gravel Driveway (18ft wide)</name>
+<Style><LineStyle><color>5500aacc</color><width>3</width></LineStyle><fill>1</fill><PolyStyle><color>5500aacc</color></PolyStyle></Style>
+<Polygon><outerBoundaryIs><LinearRing><coordinates>-93.5484573,45.4676640,0 -93.5487765,45.4677610,0 -93.5487493,45.4678065,0 -93.5484272,45.4677146,0 -93.5484573,45.4676640,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+</Placemark><Placemark><name>Concrete Apron 40x12</name>
+<Style><LineStyle><color>55888888</color><width>3</width></LineStyle><fill>1</fill><PolyStyle><color>55888888</color></PolyStyle></Style>
+<Polygon><outerBoundaryIs><LinearRing><coordinates>-93.5487624,45.4677289,0 -93.5487156,45.4677291,0 -93.5487166,45.4678388,0 -93.5487634,45.4678386,0 -93.5487624,45.4677289,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+</Placemark><Placemark><name>House (80x43 + 33x45 garage)</name>
+<Style><LineStyle><color>55ffcc88</color><width>3</width></LineStyle><fill>1</fill><PolyStyle><color>55ffcc88</color></PolyStyle></Style>
+<Polygon><outerBoundaryIs><LinearRing><coordinates>-93.5493138,45.4672379,0 -93.5491851,45.4672385,0 -93.5491863,45.4673619,0 -93.5490031,45.4673628,0 -93.5490042,45.4674808,0 -93.5493161,45.4674793,0 -93.5493138,45.4672379,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+</Placemark><Placemark><name>Shop pad center</name><description>Pad elevation: 1017.3 ft, Driveway grade: -2.2%</description>
+<Point><coordinates>-93.5488253,45.4677834,0</coordinates></Point></Placemark><Placemark><name>East Setback Line</name><description>67ft from property line = 100ft from road center</description>
+<Point><coordinates>-93.5487629,45.4677837,0</coordinates></Point></Placemark></Document></kml>

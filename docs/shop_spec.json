@@ -1,0 +1,184 @@
+{
+  "$schema_version": "2.0",
+  "decision": "F",
+  "decision_date": "2025-05-04",
+  "decision_status": "FINAL — ready for topo modeling",
+  "shop": {
+    "dimensions_ft": {
+      "width_ew": 32,
+      "length_ns": 40,
+      "rotation_deg": 0,
+      "_note": "rotation_deg=0 means long axis runs N-S. width_ew is the E-W extent."
+    },
+    "center_local_ft": {
+      "x_east": 140,
+      "y_north": 380
+    },
+    "corners_local_ft": {
+      "_note": "Local feet coordinate system: origin at SW property corner, +X=east, +Y=north",
+      "SW": { "x": 124, "y": 360 },
+      "SE": { "x": 156, "y": 360 },
+      "NE": { "x": 156, "y": 400 },
+      "NW": { "x": 124, "y": 400 }
+    },
+    "corners_wgs84": {
+      "_note": "Decimal degrees, WGS84. Use these for survey staking and GIS overlays.",
+      "SW": { "lat": 45.4680077, "lon": -93.5489099 },
+      "SE": { "lat": 45.4680077, "lon": -93.5487849 },
+      "NE": { "lat": 45.4681172, "lon": -93.5487849 },
+      "NW": { "lat": 45.4681172, "lon": -93.5489099 },
+      "CENTER": { "lat": 45.4680625, "lon": -93.5488474 }
+    },
+    "binding_constraint": {
+      "corner": "NE",
+      "constraint_type": "east_setback",
+      "clearance_ft": 2.4,
+      "note": "NE corner remains the binding east-setback point on the cul-de-sac curve; modeled clearance updated after shifting the pad ~8 ft southeast (May 2026) to reduce graded pad / skirt intrusion on preserved SW and N oak CRZs. Re-stake NE after move; survey error >2 ft can still push into violation."
+    },
+    "setback_clearances_ft": {
+      "east_NE_corner": 2.4,
+      "east_SE_corner": 37.0,
+      "south": 288,
+      "north": 20,
+      "west": "not binding (shop is far east)"
+    }
+  },
+  "trees": {
+    "remove": [
+      {
+        "id": "OAK_SE",
+        "species": "red oak (Quercus rubra)",
+        "circumference_ft_in": "3'10\"",
+        "dbh_inches": 14.6,
+        "dripline_radius_ft": 17,
+        "danger_zone_ft": 9,
+        "age_estimate_years": "55-70",
+        "location_local_ft": { "x": 127, "y": 379 },
+        "location_wgs84": { "lat": 45.468060, "lon": -93.548898 },
+        "removal_reason": "Trunk inside shop footprint (no other option preserves it without 13+ ft variance and high collateral damage to OAK_N)",
+        "felling_window": "October-March (avoid oak wilt vector season Apr-Jul)",
+        "wood_disposition": "Mill for slabs/beams; portable sawyer ~$1.50-2.50/board ft"
+      }
+    ],
+    "preserve": [
+      {
+        "id": "OAK_SW",
+        "species": "red oak",
+        "circumference_ft_in": "3'4\"",
+        "dbh_inches": 12.7,
+        "dripline_radius_ft": 10,
+        "danger_zone_ft": 5,
+        "location_local_ft": { "x": 108, "y": 396 },
+        "location_wgs84": { "lat": 45.468107, "lon": -93.548972 },
+        "edge_dist_to_shop_ft": 16.0,
+        "status": "After pad shift SE (May 2026): trunk-to-footprint edge ~16 ft; canopy may still overhang — roots outside 5' danger zone"
+      },
+      {
+        "id": "OAK_N",
+        "species": "red oak",
+        "circumference_ft_in": "4'10\"",
+        "dbh_inches": 18.5,
+        "dripline_radius_ft": 20,
+        "danger_zone_ft": 10,
+        "location_local_ft": { "x": 131, "y": 428 },
+        "location_wgs84": { "lat": 45.468193, "lon": -93.548881 },
+        "edge_dist_to_shop_ft": 28.0,
+        "status": "After pad shift SE: north edge of pad farther from trunk — ~28 ft edge clearance to footprint"
+      },
+      {
+        "id": "OAK_W",
+        "species": "red oak",
+        "circumference_ft_in": "(unmeasured)",
+        "dbh_inches_estimate": 13,
+        "dripline_radius_ft": 12,
+        "danger_zone_ft": 6,
+        "location_local_ft": { "x": 102, "y": 415 },
+        "location_wgs84": { "lat": 45.468157, "lon": -93.548996 },
+        "edge_dist_to_shop_ft": 26.6,
+        "status": "After pad shift SE: west edge of pad farther from trunk"
+      }
+    ],
+    "_arborist_methodology": {
+      "30_percent_root_rule": "A healthy mature tree typically survives loss of up to 30% of roots. Above that, mortality risk is substantial.",
+      "danger_zone_derivation": "For one-sided construction, danger_zone = dripline_radius / 2. Construction inside this radius exceeds 30% root impact for the affected side.",
+      "owner_acceptance": "Owner accepts canopy intrusion (roots intact) on retained trees. Owner does NOT accept placements that risk killing them."
+    }
+  },
+  "reference_geometry": {
+    "local_origin": {
+      "description": "SW corner of the parcel (Lot 3 Blk 1 Eagle Creek Estates)",
+      "lat": 45.467022,
+      "lon": -93.549394,
+      "convention": "x_east = +X feet east of origin; y_north = +Y feet north of origin"
+    },
+    "datum": "WGS84",
+    "lidar_crs": "EPSG:26915 (NAD83 / UTM Zone 15N), elevation meters above NAVD88",
+    "parcel_boundary_source": "Sherburne County GIS via parcel_and_setbacks_mymaps.kml",
+    "setback_definitions": {
+      "south_front_ft": 67,
+      "east_front_ft": 67,
+      "_east_note": "East setback follows the curving cul-de-sac arc; bows west (toward parcel interior) at higher latitudes. See parcel_and_setbacks_mymaps.kml for exact geometry.",
+      "north_rear_ft": 25,
+      "west_side_ft": 10
+    }
+  },
+  "supersedes": {
+    "previous_decision_files": [
+      "options_a_b_archive.html",
+      "shop_plan_option_c.kml"
+    ],
+    "previous_options_dropped": [
+      {
+        "id": "Option_A",
+        "description": "32x40 kitty-corner NE of house, ~40' from house",
+        "status": "DROPPED — superseded by Option F (20+ feet further north, near cul-de-sac)"
+      },
+      {
+        "id": "Option_B",
+        "description": "32x40 shifted 25' further north than Option A",
+        "status": "DROPPED — superseded by Option F"
+      },
+      {
+        "id": "Option_C",
+        "description": "32x40 far north, partial hillside cut",
+        "status": "DROPPED — superseded by Option F (see shop_plan_option_c.kml for original geometry)"
+      }
+    ],
+    "change_summary": "Decision evolved from earlier A/B/C placements (all rejected). Option F locked near cul-de-sac; pad center revised to (140, 380) ft local (May 2026) — ~8 ft southeast of prior (132, 388) — to pull graded pad / skirt away from preserved SW and N oak CRZs while keeping OAK_SE removal inside the footprint. Re-verify NE binding with survey after staking."
+  },
+  "rejected_alternatives_for_reference": [
+    {
+      "id": "red_rectangle",
+      "description": "40W rotated, snug against cul-de-sac between SE and N oaks",
+      "rejection_reason": "Required ~13' variance AND violated SE/N danger zones — trees lost anyway",
+      "variance_required_ft": 13
+    },
+    {
+      "id": "between_trees_no_rotation",
+      "description": "32W x 40L between SE and N, no oak removal",
+      "rejection_reason": "Required ~28' variance (42% intrusion into 67' setback) — denial likely",
+      "variance_required_ft": 28
+    },
+    {
+      "id": "far_west_rotated",
+      "description": "40W x 32L rotated, snuggled into far west of buildable area",
+      "rejection_reason": "All oaks preserved BUT shop ~50' further from cul-de-sac, OAK SW exactly at 5' danger threshold (construction reality damages it anyway), defeats new approach driveway purpose",
+      "variance_required_ft": 0
+    }
+  ],
+  "owner_constraints": {
+    "shop_dimensions": "FIXED at 32x40 or 40x32 (rotated). No other sizes considered.",
+    "trailer_storage": "2022 Grand Design Imagine XLS 23BHE: 10'11\" tall, 23' long. Requires 12' overhead door minimum.",
+    "tree_protection": "Belt-and-suspenders protection (temp fencing, etc.) explicitly DECLINED",
+    "variance_preference": "Zero-variance solution strongly preferred. Application possible but politically expensive.",
+    "existing_planting_credit": "Owner has planted 100+ trees on the property. Net forest stewardship is positive."
+  },
+  "validation_targets": {
+    "_purpose": "Self-check criteria for any code that produces shop geometry from this spec",
+    "shop_dimensions_match": "abs(SE.x - SW.x) == 32 AND abs(NE.y - SE.y) == 40",
+    "all_preserved_oaks_safe": "For each oak in trees.preserve: edge_dist_to_shop_ft >= danger_zone_ft",
+    "no_oak_trunks_inside_shop": "For each oak in trees.preserve: trunk location is NOT inside shop polygon",
+    "ne_corner_setback": "NE corner east_setback clearance >= 2.0 ft (must remain compliant)",
+    "removed_oak_trunk_inside": "OAK_SE trunk SHOULD be inside shop polygon (it's being removed)"
+  }
+}
